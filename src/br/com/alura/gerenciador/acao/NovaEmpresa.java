@@ -14,10 +14,11 @@ import br.com.alura.gerenciador.modelo.Empresa;
 
 public class NovaEmpresa implements Acao {
 
-	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		System.out.println("Cadastrando nova empresa");
-		
+
 		String nomeEmpresa = request.getParameter("nome");
 		String paramDataEmpresa = request.getParameter("data");
 
@@ -32,6 +33,7 @@ public class NovaEmpresa implements Acao {
 		Empresa empresa = new Empresa();
 		empresa.setNome(nomeEmpresa);
 		empresa.setDataAbertura(dataAbertura);
+
 
 		Banco banco = new Banco();
 		banco.adiciona(empresa);

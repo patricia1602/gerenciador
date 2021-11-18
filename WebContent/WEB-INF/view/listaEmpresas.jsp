@@ -19,7 +19,7 @@
 	Lista de empresas: <br />
 	
 	<ul>
-		<c:forEach items="${empresas}" var="empresa">
+		<c:forEach items="${listaEmpresas}" var="empresa">
 			
 			<li>
 				${empresa.nome } - <fmt:formatDate value="${empresa.dataAbertura }" pattern="dd/MM/yyyy"/> 
