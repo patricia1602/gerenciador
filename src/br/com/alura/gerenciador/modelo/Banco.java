@@ -14,9 +14,11 @@ public class Banco {
 		Empresa empresa = new Empresa();
 		empresa.setId(chaveSequencial++);
 		empresa.setNome("Alura");
+		
 		Empresa empresa2 = new Empresa();
 		empresa2.setId(chaveSequencial++);
 		empresa2.setNome("Caelum");
+		
 		lista.add(empresa);
 		lista.add(empresa2);
 
@@ -46,9 +48,9 @@ public class Banco {
 		Iterator<Empresa> it = lista.iterator();
 
 		while (it.hasNext()) {
-			Empresa emp = it.next();
+			Empresa empresa = it.next();
 
-			if (emp.getId() == id) {
+			if (empresa.getId() == id) {
 				it.remove();
 			}
 		}
