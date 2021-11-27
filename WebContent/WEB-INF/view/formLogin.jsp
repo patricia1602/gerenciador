@@ -8,13 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	 
+	 	<c:import url="logout-parcial.jsp"/> 
+	 
 	<form action="${linkEntradaServlet}" method="post">
 
 		Login: <input type="text" name="login" />
 		 Senha: <input type="password" name="senha" />
 		 
-		  <input type="hidden" name="acao" value="Login" />
+		  <input type="hidden" name="acao" value="login" />
 		  
 		   <input type="submit" />
 	</form>
