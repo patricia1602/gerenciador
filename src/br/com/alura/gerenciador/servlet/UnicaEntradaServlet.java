@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.alura.gerenciador.acao.Acao;
 
-@WebServlet("/entrada")
+//@WebServlet(urlPatterns = "/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -35,7 +35,7 @@ public class UnicaEntradaServlet extends HttpServlet {
 		String nome;
 		try {
 
-			Class<?> classe = Class.forName(nomeDaClasse);// carrega a classe com nome
+			Class classe = Class.forName(nomeDaClasse);// carrega a classe com o nome
 			Acao acao = (Acao) classe.newInstance();
 			nome = acao.executa(request, response);
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {

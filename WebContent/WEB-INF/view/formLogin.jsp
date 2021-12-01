@@ -14,11 +14,12 @@
 	<form action="${linkEntradaServlet}" method="post">
 
 		Login: <input type="text" name="login" />
-		 Senha: <input type="password" name="senha" />
-		 
+		Senha: <input type="password" name="senha" />
+		
 		  <input type="hidden" name="acao" value="login" />
 		  
-		   <input type="submit" />
+		 <input type="submit" />
+		  
 	</form>
 
 </body>
